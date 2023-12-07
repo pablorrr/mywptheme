@@ -11,7 +11,6 @@
     <!-- Naprawia stronę w przeglądarkach Internet Explorer starszych od wersji 9 nie wyswietljacych html5
          by Remy Sharp http://remysharp.com/2009/01/07/html5-enabling-script/ -->
     <!--[if lt IE 9]>
-
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <?php
