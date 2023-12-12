@@ -64,25 +64,25 @@ add_action('after_setup_theme', 'mywptheme_setup');
  */
 function mywptheme_widgets_init() {
     register_sidebar( array(
-        'name'          => esc_html__( 'Sidebar', 'wptheme' ),
+        'name'          => esc_html__( 'Sidebar', 'mywptheme' ),
         'id'            => 'sidebar-1',
-        'description'   => esc_html__( 'Add widgets here.', 'wptheme' ),
+        'description'   => esc_html__( 'Add widgets here.', 'mywptheme' ),
         'before_widget' => '<div style="style="padding:15px;" id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer 1', 'wptheme' ),
+        'name'          => esc_html__( 'Footer 1', 'mywptheme' ),
         'id'            => 'footer-1',
-        'description'   => esc_html__( 'Add widgets here.', 'wptheme' ),
+        'description'   => esc_html__( 'Add widgets here.', 'mywptheme' ),
         'before_widget' => '<div style="padding:15px;" id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer 2', 'wptheme' ),
+        'name'          => esc_html__( 'Footer 2', 'mywptheme' ),
         'id'            => 'footer-2',
         'description'   => esc_html__( 'Add widgets here.', 'wptheme' ),
         'before_widget' => '<div style="padding:15px;" id="%1$s" class="widget %2$s">',
@@ -91,7 +91,7 @@ function mywptheme_widgets_init() {
         'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer 3', 'wptheme' ),
+        'name'          => esc_html__( 'Footer 3', 'mywptheme' ),
         'id'            => 'footer-3',
         'description'   => esc_html__( 'Add widgets here.', 'wptheme' ),
         'before_widget' => '<div style="padding:15px;" id="%1$s" class="widget %2$s">',
