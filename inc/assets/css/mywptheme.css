@@ -50,3 +50,11 @@ p {
 .navbar-nav li a:hover {
     color: #1abc9c !important;
 }
+
+/*comments*/
+#reply-title{color: #2f2f2f;}
+#email-notes{color: #2f2f2f;}
+#commentform > p.form-allowed-tags{color: #2f2f2f;}
+#commentform > p{color: #2f2f2f;}
+#comments > ol{color: #2f2f2f;}
+#comments-title {color: #2f2f2f;}
