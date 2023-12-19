@@ -101,3 +101,23 @@ function mywptheme_widgets_init() {
     ) );
 }
 add_action( 'widgets_init', 'mywptheme_widgets_init' );
+
+/**
+ * Create hyperlink to standard post archive
+ */
+
+
+function mywptheme_display_archive_link()
+{//https://developer.wordpress.org/reference/functions/wp_get_archives/
+    $args = array(
+        'type' => 'monthly',
+        'limit' => '',
+        'format' => '',
+        'before' => '<li class="list-group-item">',
+        'after' => '</li>',
+        'show_post_count' => false,
+        'echo' => 1,
+        'order' => 'DESC'
+    );
+    wp_get_archives($args);
+}

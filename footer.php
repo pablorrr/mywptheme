@@ -14,6 +14,60 @@
     <hr>
     <!-- login, search - row -->
     <div class="row">
+    <div style="" class="col-sm-12 col-md-4">
+                <?php if (function_exists('wp_tag_cloud')) :
+                    $args = array('public' => true, '_builtin' => false);
+                    $taxonomies = get_taxonomies($args);
+                    if (isset ($taxonomies)) {
+                        $taxonomies = array_values($taxonomies);
+                    }
+                    $first_tax = !empty($taxonomies[0]) ? $taxonomies[0] : 'category';
+                    $second_tax = !empty($taxonomies[1]) ? $taxonomies[1] : 'post_tag'; ?>
+
+                    <h2><?php _e('Popular tags and categories', 'mywptheme'); ?></h2>
+                    <h5><?php _e('Categories', 'mywptheme'); ?></h5>
+                    <ul class="list-group list-unstyled tagcloud">
+                        <li class="list-group-item">
+                            <?php //display Wordpress Tag Cloud
+                            wp_tag_cloud(array(
+                                'smallest' => 13,
+                                'largest' => 26,
+                                'unit' => 'pt',
+                                'number' => 45,
+                                'format' => 'flat',
+                                'separator' => "\n",
+                                'orderby' => 'name',
+                                'order' => 'ASC',
+                                'exclude' => '',
+                                'include' => '',
+                                'link' => 'view',
+                                'taxonomy' => $first_tax,
+                            )); ?>
+                        </li>
+                    </ul>
+                    <h5><?php _e('Tags', 'mywptheme'); ?></h5>
+                    <ul class="list-group list-unstyled tagcloud">
+                        <li class="list-group-item">
+                            <?php wp_tag_cloud(array(
+                                'smallest' => 13,
+                                'largest' => 20,
+                                'unit' => 'pt',
+                                'number' => 45,
+                                'format' => 'flat',
+                                'separator' => "\n",
+                                'orderby' => 'name',
+                                'order' => 'DESC',
+                                'exclude' => '',
+                                'include' => '',
+                                'link' => 'view',
+                                'taxonomy' => $second_tax,
+                            ));
+                            ?>
+                        </li>
+                    </ul>
+                <?php endif; ?>
+            </div><!-- .col-md-4 -->
+
         <div style="color:black;"  class="col-sm-12 col-md-4">
             <?php get_search_form(); ?>
         </div>
@@ -36,6 +90,7 @@
                 </ul>
             <?php endif; ?>
         </div>
+    </div>
 
 </footer>
 </body>
