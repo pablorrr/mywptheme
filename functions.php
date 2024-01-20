@@ -121,3 +121,7 @@ function mywptheme_display_archive_link()
     );
     wp_get_archives($args);
 }
+
+
+
+require_once get_template_directory().'/inc/woocommerce.php';

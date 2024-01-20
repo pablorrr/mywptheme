@@ -8,7 +8,8 @@
  *
  */
 get_header();?>
-<h1 style="color: red;">single.php</h1>
+<h4 style="color:red"><?php _e('single.php', 'mywptheme'); ?></h4>
+
     <div id="content" class="container">
         <div class="row mx-auto m-single">
             <section id="primary" class="content-area col-sm-12 col-md-8 col-lg-8">

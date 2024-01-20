@@ -7,6 +7,8 @@
     <meta charset="<?php bloginfo('charset'); ?>"/><!--dynamizacja strony kodowej tutaj utf8-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-LCyMs/SyeoZNVlBD5fBnbwW8tVILP5huT2exdFU5bsz/g7IoU0af02uTNPZsT3qN" crossorigin="anonymous">
+
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/><!--zwraca adres pingback-->
     <!-- Naprawia stronę w przeglądarkach Internet Explorer starszych od wersji 9 nie wyswietljacych html5
          by Remy Sharp http://remysharp.com/2009/01/07/html5-enabling-script/ -->

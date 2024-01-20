@@ -1,0 +1,75 @@
+/* Resetowanie stylów dla WooCommerce */
+.woocommerce {
+    clear: both;
+}
+
+/* Styl dla kontenera produktu */
+.woocommerce ul.products {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styl dla pojedynczego produktu */
+.woocommerce ul.products li.product {
+    float: left;
+    margin: 0 3.8% 2.992em 0;
+    position: relative;
+    width: 22.7%;
+}
+
+/* Styl dla tytułu produktu */
+.woocommerce ul.products li.product h2 {
+    font-size: 1em;
+    margin: 0 0 0.6em;
+}
+
+/* Styl dla ceny produktu */
+.woocommerce ul.products li.product .price {
+    font-size: 1.2em;
+}
+
+/* Styl dla przycisku "Dodaj do koszyka" */
+.woocommerce ul.products li.product .button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: 1px solid #4CAF50;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Styl dla koszyka */
+.woocommerce-cart-form {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Styl dla tabeli koszyka */
+.woocommerce-cart-form table.shop_table {
+    width: 100%;
+}
+
+/* Styl dla nagłówków tabeli koszyka */
+.woocommerce-cart-form table.shop_table th {
+    font-size: 1em;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Styl dla wierszy tabeli koszyka */
+.woocommerce-cart-form table.shop_table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Styl dla całkowitej sumy w koszyku */
+.woocommerce-cart-form table.shop_table td.order-total {
+    font-weight: bold;
+}
