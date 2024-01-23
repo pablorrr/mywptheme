@@ -44,6 +44,59 @@ function mywptheme_scripts()
 add_action('wp_enqueue_scripts', 'mywptheme_scripts');
 
 
+
+// ---------------------------------------------
+// remove WooCommerce css style when is unnecessary     -
+// source: https://crunchify.com/how-to-stop-loading-woocommerce-js-javascript-and-css-files-on-all-wordpress-postspages/
+// ---------------------------------------------
+
+
+add_action('wp_enqueue_scripts', 'mywptheme_disable_woocommerce_loading_css_js');
+
+function mywptheme_disable_woocommerce_loading_css_js()
+{
+
+    // Check if WooCommerce plugin is active
+    if (function_exists('is_woocommerce')) {
+
+        // Check if it's any of WooCommerce page
+        if (!is_woocommerce() && !is_cart() && !is_checkout()) {
+
+            ## Dequeue WooCommerce styles
+            wp_dequeue_style('woocommerce-layout');
+            wp_dequeue_style('woocommerce-general');
+            wp_dequeue_style('woocommerce-smallscreen');
+
+            ## Dequeue WooCommerce scripts
+            wp_dequeue_script('wc-cart-fragments');
+            wp_dequeue_script('woocommerce');
+            wp_dequeue_script('wc-add-to-cart');
+
+        }
+    }
+}
+
+// ---------------------------------------------
+// add WC CSS only when WC is activated
+// ---------------------------------------------
+
+add_action('wp_enqueue_scripts', 'mywptheme_enable_woocommerce_loading_css');
+
+function mywptheme_enable_woocommerce_loading_css()
+{
+
+    // Check if WooCommerce plugin is active
+    if (function_exists('is_woocommerce')) {
+
+        // Check if it's any of WooCommerce page
+        if (is_woocommerce() ) {
+
+            wp_enqueue_style('mywpthemewc-style', get_template_directory_uri().'/inc/assets/css/woocommerce.css', array(), '1.0', false);
+        }
+    }
+}
+
+
 // ---------------------------------------------------
 // Menu  section    -
 // --------------------------------------------------

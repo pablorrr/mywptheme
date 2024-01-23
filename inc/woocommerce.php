@@ -70,7 +70,7 @@ function wp_theme_display_shop_page_link()
 								<i class="fa fa-shopping-bag"></i></a>';
 }
 
-add_action('woocommerce_after_single_product', 'wp_theme_display_meta_link', 6);
+//add_action('woocommerce_after_single_product', 'wp_theme_display_meta_link', 6);
 
 
 /**
@@ -97,37 +97,28 @@ if (class_exists('woocommerce') && is_plugin_active('woocommerce/woocommerce.php
     function wptheme_custom_menu_item($items, $args)
     {
         if ($args->theme_location == 'primary') {
-            $items .= '<div class="row mx-md-n5">
-                        <div class="col px-md-5">
-                            <div class="p-1 border bg-light">
+            $items .= '<li class="nav-item menu-item">
+                            <a  href="' . esc_url(wc_get_page_permalink('shop')) . '" >shop
+                              <i class="fa fa-shopping-bag"></i>
+                               </a>
+                               </li>  
+                             <li class="nav-item menu-item">
                             <a  href="' . esc_url(wc_get_page_permalink('cart')) . ' " >cart
                                 <i class="fa fa-shopping-cart"></i>
                                 </a>
-                            </div>
-						</div>
-                        <div class="col px-md-5">
-                            <div class="p-1 border bg-light">
-                            <a  href="' . esc_url(wc_get_page_permalink('shop')) . '" >shop
-                              <i class="fa fa-shopping-bag"></i>
-                                </a>
-                                </div>
-						 </div>
-						 <div class="col px-md-5">
-                            <div class="p-1 border bg-light">
+                                </li>
+                        
+                     
+						 <li class="nav-item menu-item">
                             <a  href="' . esc_url(wc_get_page_permalink('myaccount')) . '" >account
                                  <i class="fa fa-user"></i>
                                 </a>
-                                </div>
-                                
-						 </div>
-						 <div class="col px-md-5">
-                            <div class="p-1 border bg-light">
+                                 </li>  
+                              <li class="nav-item menu-item">    
                             <a  href="' . esc_url(wc_get_checkout_url()) . '" >checkount
                                <i class="fa fa-check"></i>
                                 </a>
-                                </div>
-                                </div>
-                        </div>';
+                                </li>';
         }
         return $items;
     }

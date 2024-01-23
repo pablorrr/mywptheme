@@ -73,3 +73,28 @@
 .woocommerce-cart-form table.shop_table td.order-total {
     font-weight: bold;
 }
+/* SHOP page */
+button, input, optgroup, select, textarea {
+    color: black;
+    font: inherit;
+    margin: 0;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color:black;
+}
+.woocommerce .woocommerce-result-count, .woocommerce-page .woocommerce-result-count {
+    float: left;
+    color: black;
+}
+p {
+    font-size: 16px;
+    color: black;
+}
+
+#woocommerce-wrapper{margin: 15px;}
+
+span{color:brown;}
+
