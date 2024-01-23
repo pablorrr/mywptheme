@@ -76,27 +76,6 @@ function mywptheme_disable_woocommerce_loading_css_js()
     }
 }
 
-// ---------------------------------------------
-// add WC CSS only when WC is activated
-// ---------------------------------------------
-
-add_action('wp_enqueue_scripts', 'mywptheme_enable_woocommerce_loading_css');
-
-function mywptheme_enable_woocommerce_loading_css()
-{
-
-    // Check if WooCommerce plugin is active
-    if (function_exists('is_woocommerce')) {
-
-        // Check if it's any of WooCommerce page
-        if (is_woocommerce() ) {
-
-            wp_enqueue_style('mywpthemewc-style', get_template_directory_uri().'/inc/assets/css/woocommerce.css', array(), '1.0', false);
-        }
-    }
-}
-
-
 // ---------------------------------------------------
 // Menu  section    -
 // --------------------------------------------------

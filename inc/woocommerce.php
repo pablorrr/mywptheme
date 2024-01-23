@@ -11,7 +11,7 @@
  */
 function wp_enqueue_woocommerce_style()
 {
-    wp_register_style('css-woocommerce', get_template_directory_uri() . 'inc/assets/css/woocommerce.css');
+    wp_register_style('css-woocommerce', get_template_directory_uri() . '/inc/assets/css/woocommerce.css');
 
     if (class_exists('woocommerce') && (is_woocommerce())) {
         wp_enqueue_style('css-woocommerce');
@@ -70,7 +70,6 @@ function wp_theme_display_shop_page_link()
 								<i class="fa fa-shopping-bag"></i></a>';
 }
 
-//add_action('woocommerce_after_single_product', 'wp_theme_display_meta_link', 6);
 
 
 /**
@@ -103,22 +102,22 @@ if (class_exists('woocommerce') && is_plugin_active('woocommerce/woocommerce.php
                                </a>
                                </li>  
                              <li class="nav-item menu-item">
-                            <a  href="' . esc_url(wc_get_page_permalink('cart')) . ' " >cart
+                            <a  href="'.esc_url(wc_get_page_permalink('cart')) .'" >cart
                                 <i class="fa fa-shopping-cart"></i>
                                 </a>
                                 </li>
-                        
+                       
                      
 						 <li class="nav-item menu-item">
-                            <a  href="' . esc_url(wc_get_page_permalink('myaccount')) . '" >account
+                            <a  href="'.esc_url(wc_get_page_permalink('myaccount')) .'" >account
                                  <i class="fa fa-user"></i>
                                 </a>
-                                 </li>  
-                              <li class="nav-item menu-item">    
-                            <a  href="' . esc_url(wc_get_checkout_url()) . '" >checkount
-                               <i class="fa fa-check"></i>
+                                 </li>
+                                 	 <li class="nav-item menu-item">
+                            <a  href="'.esc_url(wc_get_page_permalink('checkout')) .'" >checkout
+                                 <i class="fa fa-user"></i>
                                 </a>
-                                </li>';
+                                 </li>';
         }
         return $items;
     }
